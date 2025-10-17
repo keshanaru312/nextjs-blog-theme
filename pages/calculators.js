@@ -224,7 +224,7 @@ function CalculatorCategory({ title, calculators }) {
   return (
     <section className="mb-12">
       <h2 className="mb-6 text-2xl font-bold">{title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {calculators.map((calc) => (
           <CalculatorCard key={calc.id} calculator={calc} />
         ))}
@@ -233,11 +233,11 @@ function CalculatorCategory({ title, calculators }) {
   );
 }
 
-export default function Index({ globalData }) {
+export default function Calculators({ globalData }) {
   return (
     <Layout>
       <SEO
-        title={globalData.name}
+        title={`Calculators - ${globalData.name}`}
         description="Financial calculators to help you plan and manage your money"
       />
       <Header name={globalData.name} />
@@ -256,15 +256,6 @@ export default function Index({ globalData }) {
             calculators={calcs}
           />
         ))}
-
-        <div className="mt-16 pt-8 border-t border-gray-800/10 dark:border-white/10 text-center">
-          <Link
-            href="/blog"
-            className="inline-block px-6 py-3 w-full md:w-auto transition border rounded-lg bg-white/10 border-gray-800/10 backdrop-blur-lg dark:bg-black/30 hover:bg-white/20 dark:hover:bg-black/50 dark:border-white/10 focus:outline-hidden focus:ring-4 focus:ring-primary/50 text-base font-semibold"
-          >
-            📚 Read Our Financial Blog
-          </Link>
-        </div>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
