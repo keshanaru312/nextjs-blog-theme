@@ -10,6 +10,10 @@ import { useLanguage } from '../../utils/language-context';
 import { translations } from '../../utils/translations';
 import { getGlobalData } from '../../utils/global-data';
 
+// Route the site root (/) to the calculators landing page.
+export { default } from './calculators';
+export { getStaticProps } from './calculators';
+
 const calculatorDetails = {
   'emergency-fund': {
     title: 'Emergency Fund Calculator',
