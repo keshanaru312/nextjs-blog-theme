@@ -9,7 +9,7 @@ const calculators = {
   popular: [
     {
       id: 'emergency-fund',
-      title: 'Emergency Fund',
+      title: 'EmergencyFund',
       description: 'Calculate how much you need\nfor financial emergencies',
       icon: '💰',
     },
